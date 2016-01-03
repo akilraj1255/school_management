@@ -1,3 +1,5 @@
+
+<h1 style="text-align:center; font-size:60px; padding:90px;">Welcome to Charity School Management System</h1>
 <div class="col-lg-12">
     <div class="col-lg-4 col-sm-6 col-xs-12 main-widget">
         <div class="main-box infographic-box">

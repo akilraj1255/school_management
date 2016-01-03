@@ -18,17 +18,17 @@ $con=mysqli_connect("localhost","root","","database_new");
         $addr    = $_POST['addrtxt'];
         $dob     = $_POST['dob'];
         $mail    = $_POST['emailtxt'];
-        $password    = $_POST['password'];
+        $stu_exp    = $_POST['exptxt'];
         
         $role = 'Student';
         
         
         
-        $query = "INSERT INTO users_tbl VALUES('','$l_name','$password','$role')";
-        mysqli_query($con,$query);
+       // $query = "INSERT INTO users_tbl VALUES('','$l_name','$role')";
+       // mysqli_query($con,$query);
 
         
-        $query  = "INSERT INTO stu_tbl VALUES('$roll_no', NULL,'$f_name','$l_name','$gender','$dob','$addr','$phone','$mail')";
+        $query  = "INSERT INTO stu_tbl VALUES('$roll_no', NULL,'$f_name','$l_name','$gender','$dob','$addr','$phone','$mail','$stu_exp')";
         if (mysqli_query($con,$query) == true) {
             $msg = ucfirst($f_name) ;
             echo "<div>"
@@ -53,6 +53,7 @@ if(isset($_POST['btn_upd'])){
 	$addr=$_POST['addrtxt'];
 	$phone=$_POST['phonetxt'];
 	$mail=$_POST['emailtxt'];
+	$stu_exp = $_POST['exptxt'];
 	
 	$sql_update=mysql_query("UPDATE stu_tbl SET
                                 roll_no = '$roll_no', 
@@ -62,7 +63,8 @@ if(isset($_POST['btn_upd'])){
 								dob='$dob',
 								address='$addr',
 								phone='$phone',
-								email='$mail'
+								email='$mail',
+								student_expense = '$stu_exp'
 							WHERE
 								stu_id=$id
 							");
@@ -160,6 +162,13 @@ if($opr=="upd")
                             <textarea class="form-control" name="addrtxt" cols="8" rows="6" required><?php echo $rs_upd['address'];?></textarea>
                         </div>
                     </div>
+                    
+                    <div class="form-group">
+                      <label for="exptxt" class="control-label col-sm-3">Expense:</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control" id="exptxt" name="exptxt"  value="<?php echo $rs_upd['student_expense'];?>"  >
+                      </div>
+                	</div>
                     <div class="form-group">
                         <input type="submit" name="btn_upd" value="Update" class="btn btn-success col-md-offset-4 col-sm-offset-4 col-xs-offset-2"/>
                         <input type="reset" value="Cancel" class="btn btn-primary col-md-offset-3 col-sm-offset-3 col-xs-offset-3"/>
@@ -201,17 +210,8 @@ else
                       <div class="col-sm-8">
                           <input type="text" class="form-control" id="lnametxt" name="lnametxt"  placeholder="Last Name..." required>
                       </div>
-                </div>
-                
-                <div class="form-group">
-                      <label for="password" class="control-label col-sm-3">Password:</label>
-                      <div class="col-sm-8">
-                          <input type="password" class="form-control" id="password" name="password"  placeholder="Password" required>
-                      </div>
-                </div>
-                
-                    
-                
+                </div>       
+             
                 <div class="form-group">
                       <label for="gender" class="control-label col-sm-3">Gender:</label>
                       <div class="radio col-sm-2">
@@ -231,7 +231,7 @@ else
                 <div class="form-group">
                     <label for="emailtxt" class="control-label col-sm-3">Email:</label>
                     <div class="col-sm-8">
-                        <input type="email" class="form-control" id="emailtxt" name="emailtxt"  placeholder="e.g: jazibbashir@gmail.com" required>
+                        <input type="email" class="form-control" id="emailtxt" name="emailtxt"  placeholder="e.g: moaz@gmail.com" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -245,6 +245,12 @@ else
                     <div class="col-sm-8">
                         <textarea class="form-control" name="addrtxt" cols="8" rows="6" required></textarea>
                     </div>
+                </div>
+                 <div class="form-group">
+                      <label for="exptxt" class="control-label col-sm-3">Expense:</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control" id="exptxt" name="exptxt"  placeholder="Student Expense" required>
+                      </div>
                 </div>
                 <div class="form-group">
                     <input type="submit" name="btn_sub" value="Register" class="btn btn-success col-md-offset-4 col-sm-offset-4 col-xs-offset-2"/>

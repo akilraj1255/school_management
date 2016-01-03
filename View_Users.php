@@ -32,23 +32,21 @@ if(isset($_GET['rs_id']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_view.css" />
-<title>::. Build Bright University .::</title>
+<title>::. Charity School Management .::</title>
 </head>
 
 <body>
+	<h1 style="text-align:center; font-size:30px; padding:5px;">Users View</h1>
 <div class="col-md-12  view-form-style">
-    <div class="col-md-12 entry-head margin-20b">
-        <h4 class="left">Users View</h4>
-<<<<<<< HEAD
+    <div class="col-md-1 entry-head margin-20b">
+        <!--<h4 class="left">Users View</h4>-->
         <!--<a class="btn btn-primary right" <a href="?tag=susers_entry">Add New Users</a>  -->
-=======
         <a class="btn btn-primary right" <a href="?tag=susers_entry">Add New Users</a>
->>>>>>> origin/master
     </div>
     <form role="form" data-toggle="validator" method="post" class="form-horizontal">
         <div class="form-group">
             <div class="col-md-9 col-md-offset-1     col-xs-9 col-sm-10">
-                <input type="text" class="form-control" name="searchtxt" Placeholder="Enter Subject name for search" autocomplete="off"/></div>
+                <input type="text" class="form-control" name="searchtxt" Placeholder="Enter Username for search" autocomplete="off"/></div>
             <input type="submit" name="btnsearch" value="Search" class="btn btn-info"/>
         </div>
     </form>
@@ -58,11 +56,8 @@ if(isset($_GET['rs_id']))
         <tr>
             <th>No</th>
             <th>Users Name</th>
-<<<<<<< HEAD
             <th>Approved</th>
-=======
-            <th>Password</th>
->>>>>>> origin/master
+        
             <th>Type</th>
             <th colspan="2">Operation</th>
         </tr>
@@ -87,15 +82,12 @@ if(isset($_GET['rs_id']))
       <tr bgcolor="<?php echo $color?>">
             <td><?php echo $i;?></td>
             <td><?php echo $row['username'];?></td>
-<<<<<<< HEAD
             <td><?php if($row['approved']==0){
             	echo "No";
             }else{
             	echo "Yes";
             }?></td>
-=======
-            <td><?php echo $row['password'];?></td>
->>>>>>> origin/master
+     
             <td><?php echo $row['type'];?></td>
             <td align="center"><a href="?tag=susers_entry&opr=upd&rs_id=<?php echo $row['u_id'];?>" title="Upate"><img src="picture/update.png" /></a></td>
             <td align="center"><a href="?tag=view_users&opr=del&rs_id=<?php echo $row['u_id'];?>" title="Delete"><img src="picture/delete.png" /></a></td>

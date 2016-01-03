@@ -30,14 +30,15 @@ if(isset($_GET['rs_id']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_view.css" />
-<title>Untitled Document</title>
+<title>Charity School</title>
 </head>
 
 <body>
+	<h1 style="text-align:center; font-size:30px; padding:5px;">Grades View</h1>
 <div class="col-md-12  view-form-style">
     <div class="col-md-12 entry-head margin-20b">
-        <h4 class="left">Score View</h4>
-        <a class="btn btn-primary right" href="?tag=score_entry">Add New Score</a>
+        <!--<h4 class="left">Score View</h4>-->
+        <!--<a class="btn btn-primary right" href="?tag=score_entry">Add New Score</a>-->
     </div>
     <form role="form" data-toggle="validator" method="post" class="form-horizontal">
         <div class="form-group">
@@ -54,8 +55,8 @@ if(isset($_GET['rs_id']))
             <th>No</th>
             <th>Students Name </th>
             <th>Faculties Name</th>
-            <th>Subjecst Name</th>
-            <th>Mider</th>
+            <th>Subject Name</th>
+            <th>Mids</th>
             <th>Final</th>
             <th>Note</th>
             <th colspan="2">Operation</th>

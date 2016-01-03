@@ -34,13 +34,14 @@ if(isset($_GET['rs_id']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_view.css" />
-<title>Untitled Document</title>
+<title>Charity School Management</title>
 </head>
 
 <body>
+	<h1 style="text-align:center; font-size:30px; padding:5px;">Teachers View</h1>
 <div class="col-md-12  view-form-style">
-    <div class="col-md-12 entry-head margin-20b">
-        <h4 class="left">Teachers View</h4>
+    <div class="col-md-1 entry-head margin-20b">
+        <!--<h4 class="left">Teachers View</h4>-->
         <a class="btn btn-primary right" href="?tag=teachers_entry">Add New Teacher</a>
     </div>
     <form role="form" data-toggle="validator" method="post" class="form-horizontal">
@@ -69,6 +70,7 @@ if(isset($_GET['rs_id']))
             <th>Degree</th>
             <th>Phone</th>
             <th>E-mail</th>
+            <th>Salary</th>
             <th colspan="2">Operation</th>
         </tr>
          <?php
@@ -79,7 +81,7 @@ if(isset($_GET['rs_id']))
 	if($key !="")
 		$sql_sel=mysql_query("SElECT * FROM teacher_tbl WHERE f_name  like '%$key%' or l_name like '%$key%'");
 	else
-        $sql_sel=mysql_query("SELECT * FROM teacher_tbl");
+        $sql_sel=mysql_query("SELECT * FROM teacher_tbl WHERE type='teacher';");
 		
     $i=0;
     while($row=mysql_fetch_array($sql_sel)){
@@ -93,6 +95,7 @@ if(isset($_GET['rs_id']))
             <td><?php echo $row['degree'];?></td>
             <td><?php echo $row['phone'];?></td>
             <td><?php echo $row['email'];?></td>
+            <td><?php echo $row['salary'];?></td>
             <td><a href="?tag=teachers_entry&opr=upd&rs_id=<?php echo $row['teacher_id'];?>" title="Upate"><img src="picture/update.png" /></a></td>
             <td><a href="?tag=view_teachers&opr=del&rs_id=<?php echo $row['teacher_id'];?>" title="Delete"><img src="picture/delete.png" /></a></td>
         </tr>

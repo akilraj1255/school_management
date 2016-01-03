@@ -6,8 +6,8 @@ $tag="";
 if (isset($_GET['tag']))
 $tag=$_GET['tag'];
 ?>
-<div id="admin" class="col-md-10 col-md-offset-1">
-<nav class="navbar navbar-inverse" role="navigation">
+<div id="admin" >
+<nav class="navbar navbar-default" role="navigation">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -26,9 +26,6 @@ $tag=$_GET['tag'];
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Students <b class="caret"></b></a>
 <ul class="dropdown-menu">
 <li>
-<a href="teacher.php?tag=student_entry">Student Entry</a>
-</li>
-<li>
 <a href="teacher.php?tag=view_students">View Student</a>
 </li>
 </ul>
@@ -36,11 +33,12 @@ $tag=$_GET['tag'];
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Score <b class="caret"></b></a>
 <ul class="dropdown-menu">
-<li>
-<a href="teacher.php?tag=score_entry">Score Entry</a>
-</li>
+
 <li>
 <a href="teacher.php?tag=view_scores">View Score</a>
+</li>
+<li>
+<a href="teacher.php?tag=score_entry">Score Entry</a>
 </li>
 </ul>
 </li>
@@ -64,14 +62,14 @@ $tag=$_GET['tag'];
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav side-nav visible-lg visible-md visible-sm">
+<!--<ul class="nav navbar-nav side-nav visible-lg visible-md visible-sm">
 <li>
 <a href="teacher.php?tag=student_entry">Student Entry</a>
 </li>
 <li>
 <a href="teacher.php?tag=score_entry">Scores Entry</a>
 </li>
-</ul>
+</ul>-->
 </div>
 </nav>
 <div id="wrapper">

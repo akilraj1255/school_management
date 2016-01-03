@@ -3,47 +3,36 @@ $id="";
 $opr="";
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
-
 if(isset($_GET['rs_id']))
 	$id=$_GET['rs_id'];
-	
 if(isset($_POST['btn_sub'])){
 	$bills=$_POST['bills'];
 	$extras=$_POST['extras'];	
-	
-<<<<<<< HEAD
 $stu_expense = "SELECT SUM(student_expense) as stu_exp FROM stu_tbl;";
 $stu_expense = mysql_query($stu_expense);
 $stu_expense = mysql_fetch_array($stu_expense);
 $stu_expense = $stu_expense['stu_exp'];	
-	
-=======
->>>>>>> origin/master
+
 $tot_teacher = "SELECT SUM(Salary) as teach_sal FROM teacher_tbl WHERE type='teacher';";
 $tot_teacher = mysql_query($tot_teacher);
 $tot_teacher = mysql_fetch_array($tot_teacher);
 $tot_teacher = $tot_teacher['teach_sal'];
-
 
 $tot_staff   = "SELECT SUM(Salary) as staff_sal FROM teacher_tbl WHERE type='staff';";
 $tot_staff	 = mysql_query($tot_staff);
 $tot_staff   = mysql_fetch_array($tot_staff);
 $tot_staff   = $tot_staff['staff_sal'];
 
-<<<<<<< HEAD
 $sql_ins	 = mysql_query("INSERT INTO expenses (student_expense,teachers_salary,staff_salary,bills,extras) 
 					VALUES(	
-							'$stu_expense',									
-=======
-$sql_ins	 = mysql_query("INSERT INTO expenses (teachers_salary,staff_salary,bills,extras) 
-					VALUES(										
->>>>>>> origin/master
+							'$stu_expense',
 							'$tot_teacher',
 							'$tot_staff',
 							'$bills',
 							'$extras'
 							)
-					");
+					");									
+
 if($sql_ins==true) {
     {
         echo "<div>"

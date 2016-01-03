@@ -33,14 +33,15 @@ if(isset($_GET['rs_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>::. Build Bright University .::</title>
+<title>::. Charity Schol Management.::</title>
 <link rel="stylesheet" type="text/css" href="css/style_view.css" />
 </head>
 
 <body>
+	<h1 style="text-align:center; font-size:30px; padding:5px;">Student View</h1>
 <div class="col-md-12  view-form-style">
-    <div class="col-md-12 entry-head margin-20b">
-        <h4 class="left">Student View</h4>
+    <div class="col-md-1 entry-head margin-20b">
+        <!--<h4 class="left">Student View</h4>-->
         <a class="btn btn-primary right" href="?tag=student_entry">Add New Student</a>
     </div>
     <form role="form" data-toggle="validator" method="post" class="form-horizontal">
@@ -61,6 +62,7 @@ if(isset($_GET['rs_id']))
             <th>Address</th>
             <th>Phone</th>
             <th>E-mail</th>
+            <th>Student Expenses</th>
             <th colspan="2">Operation</th>
         </tr>
 
@@ -89,6 +91,7 @@ if(isset($_GET['rs_id']))
             <td><?php echo $row['address'];?></td>
             <td><?php echo $row['phone'];?></td>
             <td><?php echo $row['email'];?></td>
+            <td><?php echo $row['student_expense'];?></td>
             <td><a href="?tag=student_entry&opr=upd&rs_id=<?php echo $row['stu_id'];?>" title="Update"><img src="picture/update.png" /></a></td>
             <td><a href="?tag=view_students&opr=del&rs_id=<?php echo $row['stu_id'];?>" title="Delete"><img src="picture/delete.png" /></a></td>
 

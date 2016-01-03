@@ -33,9 +33,10 @@ echo $msg;
 <title>Untitled Document</title>
 </head>
 <body>
+	<h1 style="text-align:center; font-size:30px; padding:5px;">Staff View</h1>
 <div class="col-md-12 view-form-style">
-<div class="col-md-12 entry-head margin-20b">
-<h4 class="left">Staff View</h4>
+<div class="col-md-1 entry-head margin-20b">
+<!--<h4 class="left">Staff View</h4>-->
 <a class="btn btn-primary right" href="?tag=staff_entry">Add New Staff</a>
 </div>
 <form role="form" data-toggle="validator" method="post" class="form-horizontal">

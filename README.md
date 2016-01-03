@@ -1,12 +1,10 @@
 # School-Management-System
-FYP Develop using ( PHP. HTML, CSS, JS , BOOTSTRAP).
-Cogdeigniter Version Comming Soon........
+Developed using ( PHP. HTML, CSS, JS , BOOTSTRAP).
+
 
 ## GETTING STARTED
 + Clone Repo Using Following link.
-```cmd
-git clone https://github.com/jazib-bashir/School-Management-System.git
-````
+ 
 + Create Database in PHPmyadmin
 + change connect.php with your credentials and DB name as following:
   - connect.php avaible in connect folder.

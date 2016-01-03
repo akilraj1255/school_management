@@ -27,8 +27,8 @@ if(isset($_POST['btn_sub'])){
     
     $role = 'Teacher';
     
-        $query = "INSERT INTO users_tbl VALUES('','$l_name','$password','$role')";
-        mysqli_query($con,$query);
+       // $query = "INSERT INTO users_tbl VALUES('','$l_name','$role')";
+      //  mysqli_query($con,$query);
     
 	
 $sql_ins=mysql_query("INSERT INTO teacher_tbl VALUES( NULL,'$f_name','$l_name' ,'$gender','$dob','$addr','$degree','$salary' ,'$married','$phone','$mail','$role')");
@@ -133,21 +133,15 @@ if($opr=="upd")
                         </div>
                     </div>
                     <div class="form-group">
-                    <label for="marriedrdo" class="control-label col-sm-3">Married:</label>
-                    <div class="radio col-sm-2">
-<<<<<<< HEAD
-                        <label><input type="radio" name="marriedrdo" value="yes" <?php if($rs_upd['married']=="yes") echo "checked";?>>Yes</label>
-                    </div>
-                    <div class="radio col-sm-4">
-                        <label><input type="radio" name="marriedrdo" value="no" <?php if($rs_upd['married']=="no") echo "checked";?>>No</label>
-=======
-                        <label><input type="radio" name="marriedrdo" value="male" <?php if($rs_upd['gender']=="male") echo "checked";?>>Yes</label>
-                    </div>
-                    <div class="radio col-sm-4">
-                        <label><input type="radio" name="marriedrdo" value="female" <?php if($rs_upd['gender']=="female") echo "checked";?>>No</label>
->>>>>>> origin/master
-                    </div>
-                </div>
+	                    <label for="marriedrdo" class="control-label col-sm-3">Married:</label>
+	                    <div class="radio col-sm-2">
+	
+	                        <label><input type="radio" name="marriedrdo" value="yes" <?php if($rs_upd['married']=="yes") echo "checked";?>>Yes</label>
+	                    </div>
+	                    <div class="radio col-sm-4">
+	                        <label><input type="radio" name="marriedrdo" value="no" <?php if($rs_upd['married']=="no") echo "checked";?>>No</label>
+						</div>  
+                	</div>
                     <div class="form-group">
                         <label for="phonetxt" class="control-label col-sm-3">Phone:</label>
                         <div class="col-sm-8">
@@ -244,18 +238,13 @@ else
                 <div class="form-group">
                     <label for="marriedrdo" class="control-label col-sm-3">Married:</label>
                     <div class="radio col-sm-2">
-<<<<<<< HEAD
+
                         <label><input type="radio" name="marriedrdo" value="yes" required>Yes</label>
                     </div>
                     <div class="radio col-sm-4">
-                        <label><input type="radio" name="marriedrdo" value="no" required>No</label>
-=======
-                        <label><input type="radio" name="marriedrdo" value="male" required>Yes</label>
+                        <label><input type="radio" name="marriedrdo" value="no" required>No</label>      
                     </div>
-                    <div class="radio col-sm-4">
-                        <label><input type="radio" name="marriedrdo" value="female" required>No</label>
->>>>>>> origin/master
-                    </div>
+                    
                 </div>
                 <div class="form-group">
                     <label for="phonetxt" class="control-label col-sm-3">Phone:</label>

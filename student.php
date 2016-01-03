@@ -6,8 +6,8 @@ $tag="";
 if (isset($_GET['tag']))
 $tag=$_GET['tag'];
 ?>
-<div id="admin" class="col-md-10 col-md-offset-1">
-<nav class="navbar navbar-inverse" role="navigation">
+<div id="admin" >
+<nav class="navbar navbar-default" role="navigation">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -58,8 +58,8 @@ $tag=$_GET['tag'];
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav side-nav visible-lg visible-md visible-sm">
-</ul>
+<!--<ul class="nav navbar-nav side-nav visible-lg visible-md visible-sm">
+</ul>-->
 </div>
 </nav>
 <div id="wrapper">

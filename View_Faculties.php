@@ -29,14 +29,15 @@ if(isset($_GET['rs_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>::. Build Bright University .::</title>
+<title>::. Charity School Management .::</title>
 <link rel="stylesheet" type="text/css" href="css/style_view.css" />
 </head>
 
 <body>
+	<h1 style="text-align:center; font-size:30px; padding:5px;">Faculty View</h1>
 <div class="col-md-12  view-form-style">
-    <div class="col-md-12 entry-head margin-20b">
-        <h4 class="left">Faculties View</h4>
+    <div class="col-md-1 entry-head margin-20b">
+        <!--h4 class="left">Faculties View</h4>-->
         <a class="btn btn-primary right" href="?tag=faculties_entry">Add New Faculty</a>
     </div>
     <form role="form" data-toggle="validator" method="post" class="form-horizontal">

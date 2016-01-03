@@ -6,8 +6,8 @@ $tag="";
 if (isset($_GET['tag']))
 $tag=$_GET['tag'];
 ?>
-<div id="admin" class="col-md-10 col-md-offset-1">
-<nav class="navbar navbar-inverse" role="navigation">
+<div id="admin" >
+<nav class="navbar navbar-default" role="navigation">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -88,21 +88,18 @@ $tag=$_GET['tag'];
 </li>
 </ul>
 </li>
-<<<<<<< HEAD
 <!--<li class="dropdown">
 <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Users <b class="caret"></b></a>
 <ul class="dropdown-menu">
 <li>
 <a href="everyone.php?tag=susers_entry">Users Entry</a>
 </li>-->
-=======
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Users <b class="caret"></b></a>
 <ul class="dropdown-menu">
 <li>
 <a href="everyone.php?tag=susers_entry">Users Entry</a>
 </li>
->>>>>>> origin/master
 <li>
 <a href="everyone.php?tag=view_users">View Users</a>
 </li>
@@ -129,38 +126,33 @@ $tag=$_GET['tag'];
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav side-nav visible-lg visible-md visible-sm">
+<!--<ul class="nav navbar-nav side-nav visible-lg visible-md visible-sm">
 <li>
-<a href="everyone.php?tag=student_entry">Student Entry</a>
+<a href="admin.php?tag=teachers_entry">Teacher Entry</a>
 </li>
 <li>
-<a href="everyone.php?tag=teachers_entry">Teacher Entry</a>
+<a href="admin.php?tag=staff_entry">Staff Entry</a>
 </li>
 <li>
-<a href="everyone.php?tag=staff_entry">Staff Entry</a>
+<a href="admin.php?tag=faculties_entry">Faculty Entry</a>
 </li>
 <li>
-<a href="everyone.php?tag=faculties_entry">Faculty Entry</a>
+<a href="admin.php?tag=subject_entry">Subjects Entry</a>
 </li>
 <li>
-<a href="everyone.php?tag=subject_entry">Subjects Entry</a>
+<a href="admin.php?tag=score_entry">Scores Entry</a>
 </li>
-<li>
-<a href="everyone.php?tag=score_entry">Scores Entry</a>
-</li>
-<<<<<<< HEAD
 <!--<li>
-<a href="everyone.php?tag=susers_entry">Users Entry</a>
-</li>-->
-=======
-<li>
-<a href="everyone.php?tag=susers_entry">Users Entry</a>
+<a href="admin.php?tag=susers_entry">Users Entry</a>
 </li>
->>>>>>> origin/master
 <li>
-<a href="everyone.php?tag=View_Expenses">Expenses</a>
+<a href="admin.php?tag=susers_entry">Users Entry</a>
+</li>
+<li>
+<a href="admin.php?tag=expense_entry">Expense Entry</a>
 </li>
 </ul>
+</div>-->
 </div>
 </nav>
 <div id="wrapper">
@@ -180,13 +172,10 @@ elseif($tag=="subject_entry")
 include("Subject_Entry.php");
 elseif($tag=="faculties_entry")
 include("Faculties_Entry.php");
-<<<<<<< HEAD
 //elseif($tag=="susers_entry")
 //include("Users_Entry.php");
-=======
 elseif($tag=="susers_entry")
 include("Users_Entry.php");
->>>>>>> origin/master
 elseif($tag=="view_students")
 include("View_Students.php");
 elseif($tag=="view_teachers")

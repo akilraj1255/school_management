@@ -24,7 +24,7 @@ if(isset($_GET['rs_id']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_view.css" />
-<title>::. Build Bright University .::</title>
+<title>::. Charity School Management .::</title>
 </head>
 
 <body>
